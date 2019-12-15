@@ -1,0 +1,46 @@
+<mat-toolbar>Cadastrar Segurado</mat-toolbar>
+
+<br>
+<form class="example-form">
+      
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="Nome">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="Sobrenome">
+      </mat-form-field></td>
+    </tr></table>
+  
+    <p>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Endereço">
+      </mat-form-field>
+     </p>
+  
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="Cidade">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="Estado">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <input matInput #postalCode maxlength="8" placeholder="CEP">
+        <mat-hint align="end">{{postalCode.value.length}} / 8</mat-hint>
+      </mat-form-field></td>
+    </tr></table>
+  </form>
+
+
+  <div class="example-button-row">
+<button (click) = "btnCadastrar()" mat-raised-button color="primary">Cadastrar</button>
+
+<p>Segue link <br>
+   {{link}}
+<ul>
+  <li *ngFor="let seguro of seguros">
+    {{seguro}}
+  </li>
+  
+</ul>
